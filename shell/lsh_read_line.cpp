@@ -5,14 +5,14 @@
 // **** OLD Version
 #define LSH_RL_BUFSIZE 1024
 
-char *lsh_read_line(void) {
+char *lsh_read_line() {
     int bufsize = LSH_RL_BUFSIZE;
     int position = 0;
     int c;
 
 
     // Cast to pointer of character
-    char *buffer = (char *)malloc(sizeof(char)* bufsize);
+    char *buffer = (char *)malloc(sizeof(char *)* bufsize);
 
     if(!buffer) {  
         std::cerr << "lsh: allocation error\n";
